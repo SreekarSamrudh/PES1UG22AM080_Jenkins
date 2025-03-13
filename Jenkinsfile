@@ -4,17 +4,17 @@ pipeline {
         stage('Clone repository') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/TejasreeCJ/PES1UG22CS653_Jenkins.git'
+                    url: 'https://github.com/SreekarSamrudh/PES1UG22AM080_Jenkins.git'
             }
         }
         stage('Build application') {
             steps {
-                sh 'g++ -o PES1UG22CS653-1 main.cpp'  
+                sh 'g++ -o PES1UG22AM080-1 main.cpp'  
             }
         }
         stage('Test application') {
             steps {
-                sh './PES1UG22CS653-1'  
+                sh './PES1UG22AM080-1'  
             }
         }
         stage('Deploy application') {
